@@ -1,0 +1,48 @@
+<!--custom-tab-bar/index.wxml-->
+<view  class="popup" wx:if="{{showPopup}}">
+  <view class="Add">
+    <view  class="Add-item" bindtap="GoToWeight">
+      <image src="../static/image/Add01.png" mode="widthFix"></image>体重记录
+    </view>
+    <view  class="Add-item" bindtap="GotoSport">
+      <image src="../static/image/Add02.png" mode="widthFix"></image>运动记录
+    </view>
+    <view class="Add-item">
+      <image src="../static/image/Add04.png" mode="widthFix"></image>饮食记录
+    </view>
+    <view  class="Add-item" bindtap="GoToNote">
+      <image src="../static/image/Add03.png" mode="widthFix"></image>写日记
+    </view>
+  </view>
+  <view style="height: 120rpx;"></view>
+</view>
+<van-popup
+  show="{{ showWeight }}"
+  round
+  closeable
+  position="bottom"
+  custom-style="height: 40%"
+  bind:close="onClose"
+>
+	<view class="AddWeight">
+		<view class="title">体重记录</view>
+		<view class="tip">请输入体重,单位斤</view>
+		<view class="input">
+			<van-stepper value="{{ 120 }}" bind:change="onChange" input-width="40px" button-size="32px"/>
+		</view>
+		<van-button type="primary" size="large" round >保存体重</van-button>
+	</view>
+</van-popup>
+<view class="tabber flex-row">
+  <block wx:for="{{list}}" wx:key="list">
+    <view class="flex-column j_c tabber-item {{selected==index && 'active'}}" wx:if="{{index===2}}" data-url="{{item.pagePath}}" data-index="{{index}}" catchtap="switchTab">
+      <view class="tabber-circle" wx:if="{{!showPopup}}">+</view>
+	  <view class="tabber-circle" wx:if="{{showPopup}}">-</view>
+      <view class="tabber-item-text">{{item.text}}</view>
+    </view>
+    <view class="flex-column j_c tabber-item {{selected==index && 'active'}}" wx:else data-url="{{item.pagePath}}" data-index="{{index}}" catchtap="switchTab">
+      <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" mode="aspectFill" class="tabber-item-icon"></image>
+      <view class="tabber-item-text">{{item.text}}</view>
+    </view>
+  </block>
+</view>

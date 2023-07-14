@@ -1,0 +1,16 @@
+
+.form{
+	width: 600rpx;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 20rpx;
+	overflow: auto;
+}
+.fromButton{
+	display: flex;
+	margin-top: 10px;
+	justify-content: space-around;
+}
+

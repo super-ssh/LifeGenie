@@ -1,0 +1,1 @@
+<view class="my"><form-basis class="vue-ref" vue-id="380011e0-1" data-ref="popup" bind:__l="__l"></form-basis><block wx:if="{{$root.g0===0}}"><login vue-id="380011e0-2" bind:__l="__l"></login></block><block wx:else><userinfo bind:click="__e" vue-id="380011e0-3" data-event-opts="{{[['^click',[['updateformbasis']]]]}}" bind:__l="__l"></userinfo></block></view>

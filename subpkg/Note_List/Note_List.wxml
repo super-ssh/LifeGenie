@@ -1,0 +1,1 @@
+<view class="Big"><view class="Note_List"><block wx:for="{{$root.l0}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view class="Note_item"><view class="Note_title">{{item.$orig.title}}</view><view class="Note_date">{{"创建时间:"+item.m0}}</view></view></block></view></view>

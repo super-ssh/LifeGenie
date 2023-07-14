@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.van-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.van-multi-ellipsis--l2{-webkit-line-clamp:2}
+.van-multi-ellipsis--l2,.van-multi-ellipsis--l3{-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden;text-overflow:ellipsis}
+.van-multi-ellipsis--l3{-webkit-line-clamp:3}
+.van-clearfix:after{clear:both;content:"";display:table}
+.van-hairline,.van-hairline--bottom,.van-hairline--left,.van-hairline--right,.van-hairline--surround,.van-hairline--top,.van-hairline--top-bottom{position:relative}
+.van-hairline--bottom:after,.van-hairline--left:after,.van-hairline--right:after,.van-hairline--surround:after,.van-hairline--top-bottom:after,.van-hairline--top:after,.van-hairline:after{border:0 solid #ebedf0;bottom:-50%;box-sizing:border-box;content:" ";left:-50%;pointer-events:none;position:absolute;right:-50%;top:-50%;-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:center;transform-origin:center}
+.van-hairline--top:after{border-top-width:1px}
+.van-hairline--left:after{border-left-width:1px}
+.van-hairline--right:after{border-right-width:1px}
+.van-hairline--bottom:after{border-bottom-width:1px}
+.van-hairline--top-bottom:after{border-width:1px 0}
+.van-hairline--surround:after{border-width:1px}
+swiper {
+  height: 180px;
+}
+.swiper_item {
+  width: 100%;
+  height: 180px;
+}
+.swiper_item image {
+  width: 100%;
+  height: 180px;
+}
+.guide {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.guide_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  color: #17cc7d;
+}
+.guide_item image {
+  width: 50px;
+  height: 50px;
+}
+.show {
+  margin-top: 25px;
+}
+.show .show_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #17cc7d;
+  font-size: 18px;
+}
+.show_header image {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.content {
+  padding: 30rpx;
+}
+.content .item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx #e2e2e2 dotted;
+}
+.content .nodata {
+  padding-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content .nodata image {
+  width: 400rpx;
+  height: 400rpx;
+}
+.content .nodata .text {
+  color: #999;
+  font-size: 20rpx;
+}
+.loadStyle .text {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  padding: 20rpx 0;
+}
+

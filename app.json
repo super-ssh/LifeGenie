@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/add/add",
+    "pages/shops/shops",
+    "pages/user/user"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "Green_Suggest/Green_Suggest",
+        "Clour_Suggest/Clour_Suggest",
+        "House_Suggest/House_Suggest",
+        "newsList/newsList",
+        "Tool_Suggest/Tool_Suggest",
+        "AddNote/AddNote",
+        "Note_List/Note_List",
+        "AddSport/AddSport",
+        "AddWeight/AddWeight"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "LifeGenie",
+    "navigationBarBackgroundColor": "#17cc7d",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/static/image/home.png",
+        "selectedIconPath": "/static/image/home2.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/static/image/message_light.png",
+        "selectedIconPath": "/static/image/message_fill.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "添加",
+        "iconPath": "/static/image/add (1).png",
+        "selectedIconPath": "/static/image/add.png"
+      },
+      {
+        "pagePath": "pages/shops/shops",
+        "text": "购物",
+        "iconPath": "/static/image/shopping.png",
+        "selectedIconPath": "/static/image/shopping-fill.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "/static/image/user (2).png",
+        "selectedIconPath": "/static/image/user-filling.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我想获得当前位置"
+    }
+  },
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-popup": "/wxcomponents/vant/dist/popup/index",
+    "van-stepper": "/wxcomponents/vant/dist/stepper/index"
+  }
+}

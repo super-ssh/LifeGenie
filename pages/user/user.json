@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "form-basis": "/components/FormBasis/FormBasis",
+    "login": "/components/Login/Login",
+    "userinfo": "/components/Userinfo/Userinfo"
+  }
+}

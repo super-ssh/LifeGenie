@@ -1,0 +1,125 @@
+/* custom-tab-bar/index.wxss */
+:host{
+  --bg:#17cc7d;
+}
+.flex-row{
+  display: flex;
+  align-items: center;
+  flex-direction: row; 
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.j_c{
+  justify-content: center;
+}
+.tabber{
+  position:fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom:0;
+  background: #fff;
+}
+.tabber-item{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 25rpx;
+}
+.tabber-item-icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+.tabber-item-text{
+  font-size: 22rpx;
+  color: var(--bg);
+  font-weight: bold;
+  position: absolute;
+  transform: translateY(40rpx);
+  opacity: 0;
+}
+.tabber-circle{
+  position: absolute;
+  width: 108rpx;
+  height: 108rpx;
+  background: #fff ;
+  z-index: 1;
+  border-radius: 50rpx;
+  font-weight: bold;
+  font-size: 50rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 108rpx;
+  top: -40rpx;
+}
+.tabber-circle::after{
+  content: ' ';
+  position: absolute;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: var(--bg);
+  z-index: -1;
+  border-radius: 50%;
+  left: 10rpx;
+  top:10rpx;
+}
+.tabber-item.active::after{
+  content: ' ';
+  width: 52rpx;
+  height: 4rpx;
+  background-color: var(--bg);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.tabber-item.active .tabber-item-text{
+  opacity: 1;
+  
+}
+/* 水平间距 */
+/* 水平间距 */
+.popup{
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(184, 184, 210, .5);
+}
+.Add {
+  display: flex;
+  padding: 10px;
+}
+.Add .Add-item {
+  color: #17cc7d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.Add .Add-item image {
+  width: 50px;
+}
+.AddWeight{
+	padding: 40rpx 20rpx;
+}
+.AddWeight .title{
+	font-size: 22px;
+	color: #17cc7d;
+	text-align: center;
+	padding-bottom: 40rpx;
+}
+.AddWeight .tip{
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	padding-bottom: 15rpx;
+}
+.AddWeight .input{
+	padding-bottom: 30rpx;
+	text-align: center;
+}
+
+
+

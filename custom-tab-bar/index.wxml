@@ -1,5 +1,8 @@
 <!--custom-tab-bar/index.wxml-->
 <view  class="popup" wx:if="{{showPopup}}">
+	<view class="Other">
+		  今日还可摄入：{{hotOther}}千卡
+	</view>
   <view class="Add">
     <view  class="Add-item" bindtap="GoToWeight">
       <image src="../static/image/Add01.png" mode="widthFix"></image>体重记录
@@ -7,13 +10,16 @@
     <view  class="Add-item" bindtap="GotoSport">
       <image src="../static/image/Add02.png" mode="widthFix"></image>运动记录
     </view>
-    <view class="Add-item">
+    <view class="Add-item" bindtap="GoToEat">
       <image src="../static/image/Add04.png" mode="widthFix"></image>饮食记录
     </view>
     <view  class="Add-item" bindtap="GoToNote">
       <image src="../static/image/Add03.png" mode="widthFix"></image>写日记
     </view>
   </view>
+<!--  <view class="Other">
+	  今日还可摄入：{{hotOther}}千卡
+  </view> -->
   <view style="height: 120rpx;"></view>
 </view>
 <van-popup
@@ -28,9 +34,26 @@
 		<view class="title">体重记录</view>
 		<view class="tip">请输入体重,单位斤</view>
 		<view class="input">
-			<van-stepper value="{{ 120 }}" bind:change="onChange" input-width="40px" button-size="32px"/>
+			<van-stepper value="{{ weightday }}" bind:change="onChange" input-width="40px" button-size="32px"/>
 		</view>
-		<van-button type="primary" size="large" round >保存体重</van-button>
+		<van-button type="primary" size="large" round bindtap="saveweight">保存体重</van-button>
+	</view>
+</van-popup>
+<van-popup
+  show="{{ showEat }}"
+  round
+  closeable
+  position="bottom"
+  custom-style="height: 40%"
+  bind:close="onCloseEat"
+>
+	<view class="AddWeight">
+		<view class="title">饮食记录</view>
+		<view class="tip">请输入今日摄入千卡,可重复输入</view>
+		<view class="input">
+			<van-stepper value="{{ eatday }}" bind:change="onChangeEat" input-width="40px" button-size="32px" step="50"/>
+		</view>
+		<van-button type="primary" size="large" round bindtap="saveEat">保存饮食</van-button>
 	</view>
 </van-popup>
 <view class="tabber flex-row">

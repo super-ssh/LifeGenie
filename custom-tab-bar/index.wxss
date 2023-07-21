@@ -120,6 +120,13 @@
 	padding-bottom: 30rpx;
 	text-align: center;
 }
+.Other{
+	height: 40rpx;
+	padding: 20rpx 0;
+	color: #17cc7d;
+	font-size: 20px;
+	text-align: center;
+}
 
 
 

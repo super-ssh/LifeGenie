@@ -102,19 +102,23 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.historyNote.length
   var l0 = _vm.__map(_vm.historyNote, function (item, i) {
     var $orig = _vm.__get_orig(item)
-    var m0 = _vm.Data(item.NoteData)
+    var m0 = g0 ? _vm.Data(item.NoteData) : null
     return {
       $orig: $orig,
       m0: m0,
     }
   })
+  var g1 = _vm.historyNote.length
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
+        g0: g0,
         l0: l0,
+        g1: g1,
       },
     }
   )
@@ -158,6 +162,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _dateFns = __webpack_require__(/*! date-fns */ 189);
+//
+//
+//
+//
 //
 //
 //

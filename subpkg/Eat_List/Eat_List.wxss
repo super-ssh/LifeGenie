@@ -35,6 +35,10 @@
 .Note_List .Note_item .Note_date {
   color: #999;
 }
+.Note_List .Note_item .tip {
+  font-size: 15px;
+  color: #999;
+}
 .Note_List .nodata {
   padding-top: 50rpx;
   display: flex;

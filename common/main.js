@@ -25,7 +25,7 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 uni.$http = _requestMiniprogram.$http;
-_requestMiniprogram.$http.baseUrl = 'http://192.168.161.205:8080';
+_requestMiniprogram.$http.baseUrl = 'http://192.168.180.205:8080';
 //请求拦截器
 _requestMiniprogram.$http.beforeRequest = function () {
   uni.showLoading({

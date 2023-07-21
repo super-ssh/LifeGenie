@@ -18,7 +18,9 @@
         "AddNote/AddNote",
         "Note_List/Note_List",
         "AddSport/AddSport",
-        "AddWeight/AddWeight"
+        "Weight_List/Weight_List",
+        "Eat_List/Eat_List",
+        "Sport_List/Sport_List"
       ]
     }
   ],
